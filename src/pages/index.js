@@ -1,12 +1,14 @@
 import React from 'react';
 
 import MainLayout from './../layouts/MainLayout';
+import Projects from './../components/Projects';
 
 const Home = () => {
     return (
         <div>
             <MainLayout>
                 <p>Hello World!</p>
+                <Projects/>
             </MainLayout>
         </div>
     )
