@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <div>
             <MainLayout>
-                <p>Hello World!</p>
                 <Projects/>
             </MainLayout>
         </div>

@@ -5,7 +5,7 @@ import './styles.scss';
 const Header = () => {
     return (
         <header>
-            <p>Hello World!</p>
+            <p>Mari Leach</p>
         </header>
     )
 };

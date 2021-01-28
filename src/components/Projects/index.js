@@ -1,7 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Home = () => {
+import './styles.scss';
+import Project from './Project';
+
+const Projects = () => {
     const data = useStaticQuery(graphql`
         query {
             allContentfulProject ( sort: { fields: creationDate, order: DESC } ) {
@@ -30,15 +33,17 @@ const Home = () => {
 
     return (
         <div className="projects">
-            {projects.map((project) => {
+            {projects.map((project, pos) => {
+                const configProject = {
+                    ...project
+                };
+
                 return (
-                    <div className="project">
-                        <h2 className="title">{project.node.title}</h2>
-                    </div>
+                    <Project key={pos} {...configProject} />
                 )
             })}
         </div>
     )
 };
 
-export default Home;
+export default Projects;
