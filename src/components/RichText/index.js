@@ -45,7 +45,7 @@ const options = {
     renderText: text => text.split('\n').flatMap((text, i) => [i > 0 && <br />, text])
 };
 
-const RichTextRenderer = props => {
+const RichText = props => {
     const { json } = props;
     
     return (
@@ -55,4 +55,4 @@ const RichTextRenderer = props => {
     )
 };
 
-export default RichTextRenderer;
+export default RichText;
