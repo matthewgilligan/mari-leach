@@ -17,9 +17,9 @@ export const query = graphql`
 `
 
 const ProjectDetails = props => {
-    const project = props.data.contentfulProject;
+    const { title, description, creationDate } = props.data.contentfulProject;
 
-    const json = JSON.parse(project.description.raw)
+    const json = JSON.parse(description.raw)
 
     const configRichText = {
         json: json,
@@ -27,8 +27,8 @@ const ProjectDetails = props => {
 
     return (
         <MainLayout>
-            <h1>{project.title}</h1>
-            <p>{project.creationDate}</p>
+            <h1>{title}</h1>
+            <p>{creationDate}</p>
             <RichText {...configRichText} />
         </MainLayout>
     )
