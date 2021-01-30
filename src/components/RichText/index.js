@@ -7,16 +7,16 @@ import './styles.scss';
 const options = {
     renderNode: {
         [BLOCKS.HEADING_1]: (node, children) => (
-            <h1 className="heading">{children}</h1>
+            <h1>{children}</h1>
         ),
         [BLOCKS.HEADING_2]: (node, children) => (
-            <h2 className="heading">{children}</h2>
+            <h2>{children}</h2>
         ),
         [BLOCKS.HEADING_3]: (node, children) => (
-            <h3 className="heading">{children}</h3>
+            <h3>{children}</h3>
         ),
         [BLOCKS.HEADING_4]: (node, children) => (
-            <h4 className="heading">{children}</h4>
+            <h4>{children}</h4>
         ),
         [BLOCKS.HEADING_5]: (node, children) => (
             <div className="divider">
