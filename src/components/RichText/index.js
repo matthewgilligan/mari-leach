@@ -32,9 +32,15 @@ const options = {
                 <p className="caption">{node.data.target.fields.description["en-US"]}</p>
             </div>
         ),
-        [INLINES.HYPERLINK]: (node) => (
-            <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{node.content[0].value}</a>
-        )
+        [INLINES.HYPERLINK]: (node) => {
+            if(node.data.uri.indexOf('player.vimeo') !== -1){
+                return(
+                    <iframe width="100%" height="321" src={node.data.uri} frameborder="0" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                )
+            } else {
+                return <a href={node.data.uri} target="_blank" rel="noopener noreferrer">{node.content[0].value}</a>;
+            }
+        }
     },
     renderText: text => text.split('\n').flatMap((text, i) => [i > 0 && <br />, text])
 };
