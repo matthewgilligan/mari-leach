@@ -34,8 +34,10 @@ const Projects = () => {
     return (
         <div className="projects">
             {projects.map((project, pos) => {
+                const { node } = project;
+
                 const configProject = {
-                    ...project
+                    ...node
                 };
 
                 return (
