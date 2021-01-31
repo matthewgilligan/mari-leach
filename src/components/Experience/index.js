@@ -12,8 +12,8 @@ const Experience = () => {
                     node {
                         company
                         jobTitle
-                        startDate(formatString: "MMMM Do, YYYY")
-                        endDate(formatString: "MMMM Do, YYYY")
+                        startDate(formatString: "MMMM YYYY")
+                        endDate(formatString: "MMMM YYYY")
                     }
                 }
             }
@@ -21,8 +21,8 @@ const Experience = () => {
                 edges {
                     node {
                         institution
-                        startDate(formatString: "MMMM Do, YYYY")
-                        endDate(formatString: "MMMM Do, YYYY")
+                        startDate(formatString: "MMMM YYYY")
+                        endDate(formatString: "MMMM YYYY")
                     }
                 }
             }
@@ -31,6 +31,8 @@ const Experience = () => {
 
     return (
         <div>
+            <h2>Experience</h2>
+
             {data.allContentfulExperience.edges.map((experience, pos) => {
                 const { node } = experience;
 
@@ -42,6 +44,8 @@ const Experience = () => {
                     <ExperienceDetails key={pos} {...configExperience} />
                 )
             })}
+
+            <h2>Education</h2>
             
             {data.allContentfulEducation.edges.map((education, pos) => {
                 const { node } = education;

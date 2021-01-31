@@ -6,7 +6,7 @@ const ExperienceDetails = props => {
     return (
         <div>
             <h1>{company ? company : institution }</h1>
-            <p>What about your Deutsch class? Was it a shambles.</p>
+            <p>{startDate} - {endDate}</p>
         </div>
     )
 };
