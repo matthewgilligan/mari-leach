@@ -12,12 +12,18 @@ export const query = graphql`
             description {
                 raw
             }
+            images {
+                title
+                file {
+                    url
+                }
+            }
         }
     }
 `
 
 const ProjectDetails = props => {
-    const { title, description, creationDate } = props.data.contentfulProject;
+    const { title, description, creationDate, images } = props.data.contentfulProject;
 
     const json = JSON.parse(description.raw)
 
@@ -30,6 +36,11 @@ const ProjectDetails = props => {
             <h1>{title}</h1>
             <p>{creationDate}</p>
             <RichText {...configRichText} />
+            
+            {images.map((image) => {
+                return <img src={image.file.url} alt={image.title} />
+            })}
+
         </MainLayout>
     )
 };
