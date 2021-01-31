@@ -12,6 +12,12 @@ const Projects = () => {
                     node {
                         title
                         slug
+                        images {
+                            title
+                            file {
+                                url
+                            }
+                        }
                     }
                 }
             }
@@ -29,7 +35,7 @@ const Projects = () => {
                 </p>
             </div>
         );
-    }
+    };
 
     return (
         <div className="projects">
@@ -43,7 +49,7 @@ const Projects = () => {
                 return (
                     <Project key={pos} {...configProject} />
                 )
-            })}
+            })};
         </div>
     )
 };
