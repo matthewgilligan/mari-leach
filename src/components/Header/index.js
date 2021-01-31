@@ -6,7 +6,7 @@ import './styles.scss';
 const Header = () => {
     return (
         <header>
-            <p>Mari Leach</p>
+            <Link to="/">Mari Leach</Link>
             <Link to="/about">About</Link>
         </header>
     )
