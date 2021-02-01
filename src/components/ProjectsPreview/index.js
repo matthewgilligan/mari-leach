@@ -1,10 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { useHorizontalScroll } from "./useSideScroll";
 
 import './styles.scss';
 import Project from './Project';
 
 const ProjectsPreview = () => {
+    const scrollRef = useHorizontalScroll();
+
     const data = useStaticQuery(graphql`
         query {
             allContentfulProject ( sort: { fields: creationDate, order: DESC } ) {
@@ -29,7 +32,7 @@ const ProjectsPreview = () => {
     if (!Array.isArray(projects)) return null;
     if (projects.length < 1) {
         return (
-            <div className="products">
+            <div className="projects">
                 <p>
                     No projects at the moment!
                 </p>
@@ -37,19 +40,27 @@ const ProjectsPreview = () => {
         );
     };
 
+    const mystyle = {
+        width: "100%",
+        display: "flex",
+        whiteSpace: "nowrap"
+      };
+
     return (
-        <div className="projects">
-            {projects.map((project, pos) => {
-                const { node } = project;
+        <div ref={scrollRef} style={{ width: 1000, overflow: "auto" }}>
+            <div style={mystyle} className="wrap">
+                {projects.map((project, pos) => {
+                    const { node } = project;
 
-                const configProject = {
-                    ...node
-                };
+                    const configProject = {
+                        ...node
+                    };
 
-                return (
-                    <Project key={pos} {...configProject} />
-                )
-            })};
+                    return (
+                        <Project key={pos} {...configProject} />
+                    )
+                })};
+            </div>
         </div>
     )
 };
