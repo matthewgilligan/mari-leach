@@ -2,6 +2,14 @@ header {
     display: flex;
     justify-content: space-between;
 
+    .info {
+        margin-right: -24px;
+        
+        a {
+            margin-left: 24px;
+        }
+    }
+
     a {
         text-decoration: none;
     }
