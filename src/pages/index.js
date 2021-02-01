@@ -1,13 +1,13 @@
 import React from 'react';
 
 import MainLayout from './../layouts/MainLayout';
-import Projects from './../components/Projects';
+import ProjectsPreview from './../components/ProjectsPreview';
 
 const Home = () => {
     return (
         <div>
             <MainLayout>
-                <Projects/>
+                <ProjectsPreview/>
             </MainLayout>
         </div>
     )
