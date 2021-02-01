@@ -18,6 +18,7 @@ const Header = () => {
         <header>
             <Link to="/">Mari Leach</Link>
             <div className="info">
+                <Link to="/projects">Projects</Link>
                 <Link to="/about">About</Link>
                 <a href={`mailto:${email}`} target="_blank" rel="noreferrer">Contact</a>
             </div>

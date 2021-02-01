@@ -9,7 +9,7 @@ const About = () => {
         <div>
             <MainLayout>
                 <AboutInfo/>
-                <Experience/>
+                <Experience />
             </MainLayout>
         </div>
     )
