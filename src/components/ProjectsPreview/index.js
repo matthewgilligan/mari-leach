@@ -7,16 +7,16 @@ import Project from './Project';
 const ProjectsPreview = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulProject ( sort: { fields: creationDate, order: DESC }, limit: 3 ) {
+            allContentfulProject ( sort: { fields: creationDate, order: DESC } ) {
                 edges {
                     node {
                         title
                         slug
                         images {
                             title
-                            file {
-                                url
-                            }
+                            fluid(maxWidth: 980) {
+                                ...GatsbyContentfulFluid
+                            } 
                         }
                     }
                 }
