@@ -1,16 +1,31 @@
 header {
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    height: 35px;
+    width: 100%;
+    background-color: #EBEBEB;
+    border-bottom: 1px solid black;
+    
+    .wrap {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 3rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
 
-    .info {
-        margin-right: -24px;
-        
-        a {
-            margin-left: 24px;
+        .info {
+            a {
+                margin-left: 24px;
+            }
         }
-    }
-
-    a {
-        text-decoration: none;
+    
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 }

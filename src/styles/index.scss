@@ -17,9 +17,9 @@ html, body {
 }
 
 body {
-    font-family: Montserrat, Helvetica, 'Open Sans', Sans-Serif;
+    font-family: Helvetica, 'Open Sans', Sans-Serif;
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1;
 }
 
@@ -33,16 +33,28 @@ a, a:hover {
     transition: all .4s ease-in-out;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1350px;
-    padding: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-    .content {
-        flex-grow: 1;
+.mainLayout {
+    .container {
+        margin: 0 auto;
+        max-width: 1350px;
+        padding: 1rem;
+    
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    
+        .content {
+            flex-grow: 1;
+        }
     }
+
+    .noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-color: #EBEBEB;
+    } 
 }

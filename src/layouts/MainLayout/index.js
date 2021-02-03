@@ -6,12 +6,15 @@ import Footer from './../../components/Footer';
 
 const MainLayout = (props) => {
     return (
-        <div className="container">
-            <div className="content">
-                <Header/>
-                {props.children}
+        <div className="mainLayout">
+            <Header/>
+            <div className="container">
+                <div className="content">
+                    {props.children}
+                </div>
+                <Footer/>
             </div>
-            <Footer/>
+            <div className="noise"></div>
         </div>
     )
 };
