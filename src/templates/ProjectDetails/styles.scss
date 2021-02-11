@@ -23,18 +23,22 @@
   }
 
   .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    justify-content: space-between;
     width: 85%;
+    height: 400px;
     margin: 0 auto;
-    transform: translateY(95px);
 
     .images {
-      width: 50%;
+      width: 45%;
     }
 
     .copy {
-      width: 50%;
-      margin: 0 30px;
+      width: 45%;
     }
   }
 }
