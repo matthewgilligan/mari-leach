@@ -1,60 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@200;300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@200;300;600&display=swap");
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-*, ::before, ::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Helvetica, 'Open Sans', Sans-Serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 1;
+  font-family: Helvetica, "Open Sans", Sans-Serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-a, a:hover {
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+a,
+a:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .mainLayout {
-    .container {
-        margin: 0 auto;
-        max-width: 1350px;
-        padding: 1rem;
-    
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    
-        .content {
-            flex-grow: 1;
-        }
-    }
+  background-color: black;
 
-    .noise {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        background-color: #EBEBEB;
-    } 
+  .container {
+    margin: 0 auto;
+    max-width: 1350px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .content {
+      flex-grow: 1;
+    }
+  }
 }
