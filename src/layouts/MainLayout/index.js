@@ -14,7 +14,6 @@ const MainLayout = (props) => {
                 </div>
                 <Footer/>
             </div>
-            <div className="noise"></div>
         </div>
     )
 };

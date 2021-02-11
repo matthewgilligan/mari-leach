@@ -25,7 +25,7 @@ const AboutInfo = () => {
     };
 
     return (
-        <div>
+        <div className="about">
             <h1>{title}</h1>
             <RichText {...configRichText} />
         </div>

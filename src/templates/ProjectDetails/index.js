@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import './styles.scss';
 import MainLayout from './../../layouts/MainLayout';
 import RichText from './../../components/RichText';
 
@@ -33,14 +34,21 @@ const ProjectDetails = props => {
 
     return (
         <MainLayout>
-            <h1>{title}</h1>
-            <p>{creationDate}</p>
-            <RichText {...configRichText} />
-            
-            {images.map((image) => {
-                return <img src={image.file.url} alt={image.title} />
-            })}
-
+            <div className="projectTemplate">
+                <div className="title">
+                    <h1>{title}</h1>
+                </div>
+                <div className="body">
+                    <div className="images">
+                        {images.map((image) => {
+                            return <img src={image.file.url} alt={image.title} />
+                        })}
+                    </div>  
+                    <div className="copy">
+                        <RichText {...configRichText} />
+                    </div>        
+                </div>
+            </div>
         </MainLayout>
     )
 };
