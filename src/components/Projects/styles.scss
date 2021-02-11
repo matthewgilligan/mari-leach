@@ -1,8 +1,17 @@
 .projects {
+  transform: translateY(100px);
+  display: flex;
   color: black;
+  background-color: lightblue;
+  border: 1px solid black;
+  height: 500px;
+  width: 800px;
+  overflow-x: scroll;
 }
 
 .project {
+  width: 500px;
+  height: 400px;
   .title {
     text-transform: uppercase;
     color: white;

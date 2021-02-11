@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
 
 import './styles.scss';
 import MainLayout from './../../layouts/MainLayout';
@@ -22,6 +24,7 @@ export const query = graphql`
         }
     }
 `
+const handleDragStart = (e) => e.preventDefault();
 
 const ProjectDetails = props => {
     const { title, description, creationDate, images } = props.data.contentfulProject;
@@ -40,9 +43,11 @@ const ProjectDetails = props => {
                 </div>
                 <div className="body">
                     <div className="images">
+                    <AliceCarousel autoPlay autoPlayInterval="3000">
                         {images.map((image) => {
-                            return <img src={image.file.url} alt={image.title} />
+                            return <img src={image.file.url} alt={image.title} className="sliderimg" />
                         })}
+                    </AliceCarousel>
                     </div>  
                     <div className="copy">
                         <RichText {...configRichText} />
