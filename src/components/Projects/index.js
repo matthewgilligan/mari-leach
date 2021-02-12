@@ -52,9 +52,9 @@ const Projects = () => {
 
     return (
         <div className="projects">
-          <ScrollHorizontal>
-            {projectItems}
-        </ScrollHorizontal>
+            <ScrollHorizontal reverseScroll = { true }>
+                {projectItems}
+            </ScrollHorizontal>
         </div>
         
     )
