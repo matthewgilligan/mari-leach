@@ -1,17 +1,25 @@
 .projects {
-  height: 22.7em;
-  transform: translateY(225px);
+  height: 550px;
+  transform: translateY(125px);
 }
 
 .project {
-  height: 100px;
-  width: 300px;
+  width: 500px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 
   .title {
     text-transform: uppercase;
     color: white;
+  }
+
+  .previewImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    background-color: white;
   }
 }
