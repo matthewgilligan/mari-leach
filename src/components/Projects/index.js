@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import ScrollHorizontal from 'react-scroll-horizontal';
 
 import './styles.scss';
 import Project from './Project';
@@ -37,20 +38,25 @@ const Projects = () => {
         );
     };
 
+    const projectItems = projects.map((project, pos) => {
+        const { node } = project;
+
+        const configProject = {
+            ...node
+        };
+
+        return (
+            <Project key={pos} {...configProject} />
+        )
+    });
+
     return (
         <div className="projects">
-            {projects.map((project, pos) => {
-                const { node } = project;
-
-                const configProject = {
-                    ...node
-                };
-
-                return (
-                    <Project key={pos} {...configProject} />
-                )
-            })};
+          <ScrollHorizontal>
+            {projectItems}
+        </ScrollHorizontal>
         </div>
+        
     )
 };
 

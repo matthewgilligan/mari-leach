@@ -1,17 +1,15 @@
 .projects {
-  transform: translateY(100px);
-  display: flex;
-  color: black;
-  background-color: lightblue;
-  border: 1px solid black;
-  height: 500px;
-  width: 800px;
-  overflow-x: scroll;
+  height: 22.7em;
+  transform: translateY(225px);
 }
 
 .project {
-  width: 500px;
-  height: 400px;
+  height: 100px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .title {
     text-transform: uppercase;
     color: white;
