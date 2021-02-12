@@ -5,7 +5,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const projectTemplate = path.resolve('./src/templates/ProjectDetails/index.js')
     const res = await graphql(`
         query {
-            allContentfulProject {
+            allContentfulProject ( sort: { fields: creationDate, order: DESC } ) {
                 edges {
                     node {
                         slug
@@ -15,12 +15,16 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
     `)
 
-    res.data.allContentfulProject.edges.forEach((edge) => {
+    const projects = res.data.allContentfulProject.edges
+
+    projects.forEach(({ node }, index) => {
         createPage({
             component: projectTemplate,
-            path: `/projects/${edge.node.slug}`,
+            path: `/projects/${node.slug}`,
             context: {
-                slug: edge.node.slug
+                slug: node.slug,
+                prev: index === 0 ? null : projects[index - 1].node,
+                next: index === (projects.length - 1) ? null : projects[index + 1].node
             }
         })
     })

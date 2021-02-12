@@ -47,4 +47,17 @@
       width: 45%;
     }
   }
+
+  .projectLinks {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+
+    a {
+      color: white;
+    }
+  }
 }
