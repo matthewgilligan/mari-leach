@@ -5,17 +5,17 @@ import { GlobalDispatchContext } from './../../../context/GlobalContextProvider'
 
 const Project = (project) => {
     const dispatch = useContext(GlobalDispatchContext);
-    const { title, slug, images } = project;
-
-    const handleChangeTitle = (title) => {
-        dispatch({
-            type: "TOGGLE_THEME"
-        });
-    }
+    const { slug, images } = project;
 
     return (
         <div className="project">
-            <Link to={`/projects/${slug}`} className="thumbnail" onMouseEnter={() => handleChangeTitle(title)}>
+            <button
+                type="button"
+                onClick={() => {
+                    dispatch({ type: "TOGGLE_THEME" })
+                }}
+            ></button>
+            <Link to={`/projects/${slug}`} className="thumbnail">
                 <img src={images[0].file.url} alt={images.title} className="image"/>
             </Link>
         </div>
