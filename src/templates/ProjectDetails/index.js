@@ -5,6 +5,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 
 import './styles.scss';
 import MainLayout from './../../layouts/MainLayout';
+import Head from './../../components/Head';
 import RichText from './../../components/RichText';
 
 export const query = graphql`
@@ -38,6 +39,7 @@ const ProjectDetails = ({ data, pageContext }) => {
 
     return (
         <MainLayout>
+            <Head title={title} />
             <div className="projectTemplate">
                 <div className="title">
                     <h1>{title}</h1>

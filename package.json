@@ -19,6 +19,7 @@
     "@material-ui/core": "^4.11.3",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.10.0",
+    "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sass": "^3.1.0",
     "gatsby-plugin-sharp": "^2.13.4",
     "gatsby-source-contentful": "^4.5.2",
@@ -27,6 +28,7 @@
     "react": "^16.12.0",
     "react-alice-carousel": "^2.3.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-scroll-horizontal": "^1.6.6"
   },
   "devDependencies": {
