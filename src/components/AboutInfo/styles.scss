@@ -1,11 +1,9 @@
 .about {
-  color: white;
-  transform: translateY(55px);
-
   .title {
     position: relative;
     width: 100%;
     height: 40px;
+    transform: translateY(55px);
     text-align: center;
     background-color: white;
 
@@ -18,6 +16,37 @@
       padding: 0;
       font-size: 1.8rem;
       color: black;
+    }
+  }
+
+  .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    height: 400px;
+    margin: 0 auto;
+
+    .images {
+      width: 45%;
+
+      .sliderimg {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+
+    .copy {
+      width: 45%;
+      color: white;
+
+      p:first-of-type {
+        margin-top: 0;
+      }
     }
   }
 }

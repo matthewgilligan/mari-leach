@@ -13,10 +13,19 @@ const AboutInfo = () => {
                     raw
                 }
             }
+            contentfulProject(slug: { eq: "confrontation" }) {
+                images {
+                    title
+                    file {
+                        url
+                    }
+                }
+            }
         }
     `)
 
-    const { title, bio } = data.contentfulSiteMetaData;
+    const { bio } = data.contentfulSiteMetaData;
+    const { images } = data.contentfulProject;
 
     const json = JSON.parse(bio.raw)
 
@@ -29,7 +38,15 @@ const AboutInfo = () => {
             <div className="title">
                 <h1>Hello!</h1>
             </div>
-            <RichText {...configRichText} />
+            <div className="body">
+                <div className="images">
+                    <img src={images[0].file.url} alt={images[0].title} className="sliderimg" />
+                    <p>{images[0].title}</p>
+                </div>  
+                <div className="copy">
+                    <RichText {...configRichText} />
+                </div>        
+            </div>
         </div>
     )
 };
