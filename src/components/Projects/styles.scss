@@ -1,25 +1,32 @@
 .projects {
-  height: 550px;
-  transform: translateY(125px);
+  height: calc(100vh - 55px);
+  transform: translateY(55px);
 }
 
 .project {
   width: 500px;
-  height: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
+  height: 100%;
+  margin: 0 10px;
 
   .title {
+    position: absolute;
+    display: none;
+    top: 0;
+    // transform: translateY(-50px);
+    font-size: 2rem;
     text-transform: uppercase;
     color: white;
   }
 
-  .previewImage {
+  .image {
     width: 500px;
     height: 500px;
+    transform: translateY(105px);
     object-fit: cover;
     background-color: white;
+  }
+
+  .thumbnail:hover + .title {
+    display: block;
   }
 }

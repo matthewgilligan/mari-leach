@@ -11,7 +11,6 @@ export const query = graphql`
     query($slug: String!) {
         contentfulProject(slug: { eq: $slug }) {
             title
-            creationDate(formatString: "MMMM Do, YYYY")
             description {
                 raw
             }
@@ -26,7 +25,7 @@ export const query = graphql`
 `
 
 const ProjectDetails = ({ data, pageContext }) => {
-    const { title, description, creationDate, images } = data.contentfulProject;
+    const { title, description, images } = data.contentfulProject;
     const { prev, next } = pageContext;
 
     console.log(pageContext);
