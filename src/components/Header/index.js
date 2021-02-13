@@ -17,9 +17,11 @@ const Header = () => {
     return (
         <header>
             <div className="wrap">
-                <Link to="/">
-                    <h1 className="siteTitle">Mari Leach   <span className="job">Graphic Designer</span></h1>
-                </Link>
+                    <h1 className="siteTitle">
+                        <Link to="/">Mari Leach</Link>
+                        <span className="job">Graphic Designer</span>
+                    </h1>
+
                 <div className="nav">
                     <Link to="/about">About</Link>
                 </div>
