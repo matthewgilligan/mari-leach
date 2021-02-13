@@ -60,3 +60,15 @@ a:hover {
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+  .mainLayout {
+    display: block;
+    flex-direction: none;
+    height: 100%;
+  }
+
+  .content {
+    flex-grow: initial;
+  }
+}

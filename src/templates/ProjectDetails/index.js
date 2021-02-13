@@ -54,7 +54,8 @@ const ProjectDetails = ({ data, pageContext }) => {
                         <RichText {...configRichText} />
                     </div>        
                 </div>
-                <div className="projectLinks">
+            </div>
+            <div className="projectLinks">
                     <div className="previous">
                         {prev &&
                             <Link to={`/projects/${prev.slug}`}>
@@ -70,7 +71,6 @@ const ProjectDetails = ({ data, pageContext }) => {
                         }
                     </div>
                 </div>
-            </div>
         </MainLayout>
     )
 };
