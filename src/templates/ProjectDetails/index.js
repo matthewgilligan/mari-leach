@@ -21,12 +21,13 @@ export const query = graphql`
                     url
                 }
             }
+            video
         }
     }
 `
 
 const ProjectDetails = ({ data, pageContext }) => {
-    const { title, description, images } = data.contentfulProject;
+    const { title, description, images, video } = data.contentfulProject;
     const { prev, next } = pageContext;
 
     console.log(pageContext);
@@ -36,6 +37,14 @@ const ProjectDetails = ({ data, pageContext }) => {
     const configRichText = {
         json: json,
     };
+
+    const media = images.map((image) => {
+        return <img src={image.file.url} alt={image.title} className="sliderimg" />
+    });
+
+    if (video) {
+        media.push(<iframe width="100%" height="450" src={video} frameborder="0" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+    }
 
     return (
         <MainLayout>
@@ -47,9 +56,7 @@ const ProjectDetails = ({ data, pageContext }) => {
                 <div className="body">
                     <div className="images">
                     <AliceCarousel autoPlay autoPlayInterval="3000">
-                        {images.map((image) => {
-                            return <img src={image.file.url} alt={image.title} className="sliderimg" />
-                        })}
+                        {media}
                     </AliceCarousel>
                     </div>  
                     <div className="copy">
