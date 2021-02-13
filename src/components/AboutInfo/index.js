@@ -41,7 +41,6 @@ const AboutInfo = () => {
             <div className="body">
                 <div className="images">
                     <img src={images[0].file.url} alt={images[0].title} className="sliderimg" />
-                    <p>{images[0].title}</p>
                 </div>  
                 <div className="copy">
                     <RichText {...configRichText} />

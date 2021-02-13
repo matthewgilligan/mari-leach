@@ -1,38 +1,38 @@
-.content {
-    line-height: 1.8;
+.richText {
+  line-height: 1.8;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .paragraph {
-    a {
-        text-decoration: underline;
-    }
+  a {
+    text-decoration: underline;
+  }
 }
 
 .divider {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .caption {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 @media screen and (max-width: 750px) {
-    .content {
-        iframe {
-            margin-bottom: 0;
-        }
+  .richText {
+    iframe {
+      margin-bottom: 0;
     }
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .content{
-        iframe {
-            height: 250px;
-        }
+  .richText {
+    iframe {
+      height: 250px;
     }
+  }
 }

@@ -50,3 +50,34 @@
     }
   }
 }
+
+@media screen and (max-width: 750px) {
+  .about {
+    .body {
+      display: block;
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: translateY(55px);
+      width: 100%;
+      padding: 30px;
+      margin-bottom: 40px;
+
+      .images,
+      .copy {
+        width: 100%;
+      }
+
+      .images {
+        .sliderimg {
+          height: 300px;
+        }
+      }
+
+      .copy {
+        height: 100%;
+        margin: 40px 0;
+      }
+    }
+  }
+}

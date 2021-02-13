@@ -49,7 +49,7 @@ const RichText = props => {
     const { json } = props;
     
     return (
-        <div className="content">
+        <div className="richText">
             {documentToReactComponents(json, options)}
         </div>
     )

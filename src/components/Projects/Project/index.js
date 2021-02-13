@@ -13,8 +13,9 @@ const Project = (project) => {
                 type="button"
                 onClick={() => {
                     dispatch({ type: "TOGGLE_THEME" })
-                }}
-            ></button>
+                }}>
+                    Toggle
+                </button>
             <Link to={`/projects/${slug}`} className="thumbnail">
                 <img src={images[0].file.url} alt={images.title} className="image"/>
             </Link>

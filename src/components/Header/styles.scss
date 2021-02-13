@@ -5,6 +5,7 @@ header {
   width: 100%;
   background-color: white;
   border-bottom: 1px solid black;
+  z-index: 9999;
 
   .wrap {
     display: flex;
