@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@200;300;600&display=swap");
+@import "./typography.scss";
 
 html {
   font-size: 10px;
@@ -20,10 +21,16 @@ body {
 }
 
 body {
-  font-family: Helvetica, "Open Sans", Sans-Serif;
+  font-family: "Konstanz Medium", Helvetica, "Open Sans", Sans-Serif;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Konstanz Bold", Helvetica, "Open Sans", Sans-Serif;
 }
 
 a {

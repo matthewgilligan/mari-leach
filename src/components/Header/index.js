@@ -17,8 +17,10 @@ const Header = () => {
     return (
         <header>
             <div className="wrap">
-                <Link to="/">Mari Leach</Link>
-                <div className="info">
+                <Link to="/">
+                    <h1 className="siteTitle">Mari Leach</h1>
+                </Link>
+                <div className="nav">
                     <Link to="/about">About</Link>
                     <a href={`mailto:${email}`} target="_blank" rel="noreferrer">Contact</a>
                 </div>
