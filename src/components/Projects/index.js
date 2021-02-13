@@ -4,8 +4,6 @@ import ScrollHorizontal from 'react-scroll-horizontal';
 
 import './styles.scss';
 import Project from './Project';
-import GlobalContextProvider, { GlobalStateContext } from './../../context/GlobalContextProvider';
-
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -27,8 +25,6 @@ const Projects = () => {
         }
     `)
 
-    const state = useContext(GlobalStateContext)
-    console.log(state);
     const projects = data.allContentfulProject.edges;
 
     if (!Array.isArray(projects)) return null;
@@ -55,16 +51,11 @@ const Projects = () => {
     });
 
     return (
-        <GlobalContextProvider>
-            <div className="projects">
-                <div className="title">
-                    <h1>{state.theme}</h1>
-                </div>
-                <ScrollHorizontal reverseScroll = { true }>
-                    {projectItems}
-                </ScrollHorizontal>
-            </div>
-        </GlobalContextProvider>
+        <div className="projects">
+            <ScrollHorizontal reverseScroll = { true }>
+                {projectItems}
+            </ScrollHorizontal>
+        </div>
     )
         
 };

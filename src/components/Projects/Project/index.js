@@ -1,10 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
-import { GlobalDispatchContext } from './../../../context/GlobalContextProvider';
-
 const Project = (project) => {
-    const dispatch = useContext(GlobalDispatchContext);
     const { slug, images } = project;
 
     return (
