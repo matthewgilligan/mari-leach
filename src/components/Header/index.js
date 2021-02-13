@@ -22,7 +22,6 @@ const Header = () => {
                 </Link>
                 <div className="nav">
                     <Link to="/about">About</Link>
-                    <a href={`mailto:${email}`} target="_blank" rel="noreferrer">Contact</a>
                 </div>
             </div>
         </header>
