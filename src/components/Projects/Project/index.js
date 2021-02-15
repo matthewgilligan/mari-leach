@@ -7,6 +7,7 @@ const Project = (project) => {
     return (
         <div className="project">
             <Link to={`/projects/${slug}`} >
+                <h2 className="title">{title}</h2>
                 <img src={images[0].file.url} alt={images.title} className="image"/>
                 <div className="overlay">
                     <h1>{title}</h1>

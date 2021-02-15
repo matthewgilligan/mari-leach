@@ -55,6 +55,9 @@ const Projects = () => {
             <ScrollHorizontal reverseScroll = { true }>
                 {projectItems}
             </ScrollHorizontal>
+            <div className="mobile">
+                {projectItems}
+            </div>
         </div>
     )
         
