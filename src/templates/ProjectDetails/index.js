@@ -43,7 +43,7 @@ const ProjectDetails = ({ data, pageContext }) => {
     });
 
     if (video) {
-        media.push(<iframe width="100%" height="450" src={video} frameborder="0" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+        media.push(<iframe width="100%" height="350" src={video} frameborder="0" title="YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
     }
 
     return (
