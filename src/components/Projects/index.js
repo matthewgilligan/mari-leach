@@ -15,8 +15,8 @@ const Projects = () => {
                         slug
                         images {
                             title
-                            file {
-                                url
+                            fluid {
+                                ...GatsbyContentfulFluid
                             }
                         }
                     }
