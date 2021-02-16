@@ -75,6 +75,7 @@ const ProjectDetails = ({ data, pageContext }) => {
                     </div>        
                 </div>
             </div>
+
             <div className="projectLinks">
                     <div className="previous">
                         {prev &&
