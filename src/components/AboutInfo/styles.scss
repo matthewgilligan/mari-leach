@@ -30,14 +30,8 @@
     height: 400px;
     margin: 0 auto;
 
-    .images {
+    .expEd {
       width: 45%;
-
-      .sliderimg {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-      }
     }
 
     .copy {
@@ -63,15 +57,9 @@
       padding: 30px;
       margin-bottom: 40px;
 
-      .images,
+      .expEd,
       .copy {
         width: 100%;
-      }
-
-      .images {
-        .sliderimg {
-          height: 300px;
-        }
       }
 
       .copy {

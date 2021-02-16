@@ -1,0 +1,19 @@
+.experience,
+.education {
+  color: #00ffff;
+  background-color: gray;
+  padding: 15px;
+  border-radius: 25px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.education {
+  margin-top: 50px;
+}

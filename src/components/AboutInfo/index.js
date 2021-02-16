@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import './styles.scss';
+import Experience from './../Experience';
 import RichText from './../RichText';
 
 const AboutInfo = () => {
@@ -38,13 +39,13 @@ const AboutInfo = () => {
             <div className="title">
                 <h1>Hello!</h1>
             </div>
-            <div className="body">
-                <div className="images">
-                    <img src={images[0].file.url} alt={images[0].title} className="sliderimg" />
-                </div>  
+            <div className="body"> 
                 <div className="copy">
                     <RichText {...configRichText} />
-                </div>        
+                </div>
+                <div className="expEd">
+                    <Experience />
+                </div>         
             </div>
         </div>
     )
