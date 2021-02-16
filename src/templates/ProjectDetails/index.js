@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -17,8 +18,8 @@ export const query = graphql`
             }
             images {
                 title
-                file {
-                    url
+                fluid {
+                    ...GatsbyContentfulFluid
                 }
             }
             video
@@ -39,7 +40,17 @@ const ProjectDetails = ({ data, pageContext }) => {
     };
 
     const media = images.map((image) => {
-        return <img src={image.file.url} alt={image.title} className="sliderimg" />
+        return (
+            <div className="image">
+                <Img 
+                    fluid={image.fluid}
+                    key={image.fluid.src}
+                    alt={image.title}
+                    style={{ height: "100%", width: "100%" }}
+                    imgStyle={{ objectFit: "cover" }}
+                />
+            </div>
+        )
     });
 
     if (video) {
