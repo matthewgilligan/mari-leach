@@ -3,17 +3,17 @@ import { Helmet } from 'react-helmet'
 import { withPrefix } from 'gatsby'
 
 const SEO = (props) => {
-  const { isBlogPost, path = '', lang = 'en' } = props;
+  const { isBlogPost, path, title, image } = props;
   const siteTitle = "Mari Leach";
   const siteUrl = "https://www.marileach.co.uk";
   const siteDescription = "Mari Leach is a freelance graphic designer based in London, working across a range of mediums from video to print."
-  const pagetitle = props.title === `${props.title} | ${siteTitle}`
-  const imageUrl = props.cover.substring(2)
+  const pageTitle = `${title} | ${siteTitle}`
+  const imageUrl = image.substring(2)
 
   return (
       <Helmet title={title}>
       {/* General tags */}
-      <html lang={lang} />
+      <html lang='en-gb' />
       <meta name="description" content={siteDescription} />
       <link rel="canonical" href={siteUrl + withPrefix(path)} />
 
@@ -27,7 +27,7 @@ const SEO = (props) => {
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={siteTitle} />
-      <meta name="twitter:title" content={pagetitle} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={`https://${imageUrl}`} />
     </Helmet>

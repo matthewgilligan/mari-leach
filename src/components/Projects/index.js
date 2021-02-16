@@ -4,6 +4,7 @@ import ScrollHorizontal from 'react-scroll-horizontal';
 
 import './styles.scss';
 import Project from './Project';
+import SEO from './../SEO';
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -17,6 +18,9 @@ const Projects = () => {
                             title
                             fluid {
                                 ...GatsbyContentfulFluid
+                            }
+                            file { 
+                                url
                             }
                         }
                     }
@@ -52,6 +56,11 @@ const Projects = () => {
 
     return (
         <div className="projects">
+            <SEO
+                title="Projects"
+                image={projects[1].node.images[0].file.url}
+                path=""
+            />
             <ScrollHorizontal reverseScroll = { true }>
                 {projectItems}
             </ScrollHorizontal>

@@ -8,11 +8,13 @@ import './styles.scss';
 import MainLayout from './../../layouts/MainLayout';
 import Head from './../../components/Head';
 import RichText from './../../components/RichText';
+import SEO from './../../components/SEO';
 
 export const query = graphql`
     query($slug: String!) {
         contentfulProject(slug: { eq: $slug }) {
             title
+            slug
             description {
                 raw
             }
@@ -21,6 +23,9 @@ export const query = graphql`
                 fluid {
                     ...GatsbyContentfulFluid
                 }
+                file {
+                    url
+                }
             }
             video
         }
@@ -28,7 +33,7 @@ export const query = graphql`
 `
 
 const ProjectDetails = ({ data, pageContext }) => {
-    const { title, description, images, video } = data.contentfulProject;
+    const { title, slug, description, images, video } = data.contentfulProject;
     const { prev, next } = pageContext;
 
     console.log(pageContext);
@@ -59,6 +64,12 @@ const ProjectDetails = ({ data, pageContext }) => {
 
     return (
         <MainLayout>
+            <SEO
+                isBlogPost="true"
+                title={title}
+                image={images[0].file.url}
+                path={`/project/${slug}`}
+            />
             <Head title={title} />
             <div className="projectTemplate">
                 <div className="title">
