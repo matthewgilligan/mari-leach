@@ -3,6 +3,17 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import './styles.scss';
 import ExperienceDetails from './ExperienceDetails';
+import EducationDetails from './EducationDetails';
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("down").style.opacity = "1";
+    } else {
+        document.getElementById("down").style.opacity = "0";
+    }
+}
 
 const Experience = () => {
     const data = useStaticQuery(graphql`
@@ -12,6 +23,11 @@ const Experience = () => {
                     node {
                         company
                         jobTitle
+                        jobDescription {
+                            raw
+                        }
+                        startDate(formatString: "MM/YYYY")
+                        endDate(formatString: "MM/YYYY")
                     }
                 }
             }
@@ -19,8 +35,8 @@ const Experience = () => {
                 edges {
                     node {
                         institution
-                        startDate(formatString: "MMMM Do, YYYY")
-                        endDate(formatString: "MMMM Do, YYYY")
+                        startDate(formatString: "YYYY")
+                        endDate(formatString: "YYYY")
                     }
                 }
             }
@@ -30,7 +46,7 @@ const Experience = () => {
     return (
         <div>
             <div className="experience">
-                <h2>Experience</h2>
+                <h2 className="section">Experience</h2>
                 {data.allContentfulExperience.edges.map((experience, pos) => {
                     const { node } = experience;
 
@@ -45,7 +61,7 @@ const Experience = () => {
             </div>
 
             <div className="education">
-                <h2>Education</h2>
+                <h2 className="section">Education</h2>
                 {data.allContentfulEducation.edges.map((education, pos) => {
                     const { node } = education;
 
@@ -54,7 +70,7 @@ const Experience = () => {
                     };
 
                     return (
-                        <ExperienceDetails key={pos} {...configEducation} />
+                        <EducationDetails key={pos} {...configEducation} />
                     )
                 })}
             </div>

@@ -1,16 +1,25 @@
 .experience,
 .education {
-  color: #00ffff;
-  background-color: gray;
-  padding: 15px;
-  border-radius: 25px;
+  color: white;
+  line-height: 1.8;
 
-  h2 {
-    margin-top: 0;
+  .section,
+  .company,
+  .jobTitle {
+    font-size: 1.8rem;
+    margin: 0;
   }
 
-  p:first-of-type {
-    margin-top: 0;
+  .section {
+    color: #00ffff;
+  }
+
+  .company {
+    margin-top: 2rem;
+  }
+
+  p {
+    margin: 0;
   }
 }
 

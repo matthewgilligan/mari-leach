@@ -30,8 +30,23 @@
     height: 400px;
     margin: 0 auto;
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     .expEd {
       width: 45%;
+      height: 515px;
+      overflow-y: auto;
+
+      .down {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(200px);
+        color: white;
+        font-size: 8rem;
+      }
     }
 
     .copy {
@@ -60,6 +75,11 @@
       .expEd,
       .copy {
         width: 100%;
+      }
+
+      .expEd {
+        height: 100%;
+        overflow-y: none;
       }
 
       .copy {

@@ -45,6 +45,7 @@ const AboutInfo = () => {
                 </div>
                 <div className="expEd">
                     <Experience />
+                    <p className="down">⇟</p>
                 </div>         
             </div>
         </div>
