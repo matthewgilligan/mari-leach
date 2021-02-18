@@ -5,16 +5,6 @@ import './styles.scss';
 import ExperienceDetails from './ExperienceDetails';
 import EducationDetails from './EducationDetails';
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("down").style.opacity = "1";
-    } else {
-        document.getElementById("down").style.opacity = "0";
-    }
-}
-
 const Experience = () => {
     const data = useStaticQuery(graphql`
         query {
