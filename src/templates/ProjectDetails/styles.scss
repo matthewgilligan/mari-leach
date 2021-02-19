@@ -35,7 +35,7 @@
     margin: 0 auto;
 
     .images {
-      width: 45%;
+      width: 550px;
 
       .sliderimg {
         width: 100%;
@@ -71,6 +71,66 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .projectTemplate {
+    .body {
+      .images {
+        width: 475px;
+
+        .sliderimg {
+          width: 100%;
+          height: 345px;
+          object-fit: cover;
+        }
+
+        .image {
+          height: 345px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .projectTemplate {
+    .body {
+      .images {
+        width: 400px;
+
+        .sliderimg {
+          width: 100%;
+          height: 291px;
+          object-fit: cover;
+        }
+
+        .image {
+          height: 291px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projectTemplate {
+    .body {
+      .images {
+        width: 350px;
+
+        .sliderimg {
+          width: 100%;
+          height: 255px;
+          object-fit: cover;
+        }
+
+        .image {
+          height: 255px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 750px) {
   .projectTemplate {
     .body {
@@ -89,8 +149,9 @@
       }
 
       .images {
-        .sliderimg {
-          height: 300px;
+        .sliderimg,
+        .image {
+          height: 400px;
         }
       }
 
@@ -104,5 +165,18 @@
   .projectLinks {
     position: relative;
     bottom: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projectTemplate {
+    .body {
+      .images {
+        .sliderimg,
+        .image {
+          height: 250px;
+        }
+      }
+    }
   }
 }
