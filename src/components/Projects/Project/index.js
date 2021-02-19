@@ -17,9 +17,9 @@ const Project = (project) => {
                         style={{ height: "100%", width: "100%" }}
                         imgStyle={{ objectFit: "cover" }}
                     />
-                </div>
-                <div className="overlay">
-                    <h1>{title}</h1>
+                    <div className="overlay">
+                        <h1>{title}</h1>
+                    </div>
                 </div>
             </Link>
         </div>
