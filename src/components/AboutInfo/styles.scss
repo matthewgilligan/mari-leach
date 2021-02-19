@@ -79,7 +79,15 @@
 
       .expEd {
         height: 100%;
-        overflow-y: none;
+        overflow-y: visible;
+
+        .down {
+          display: none;
+        }
+
+        .education {
+          padding-bottom: 40px;
+        }
       }
 
       .copy {
